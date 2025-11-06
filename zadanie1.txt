@@ -1,0 +1,5 @@
+1 . Int , dwa parametry a i b
+2. aby jej nie zmienić ręcznie przez funkcje main
+3. trzy
+4. zero
+5. zostanie wyzerowana , jest publiczna i można ją wywołać przez funkcje main
