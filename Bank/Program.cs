@@ -4,7 +4,7 @@
     {
         private int stan;
         private int kwota;
-        private int op;
+        private int op=1;
         private int koniec = 1;
 
         public void wczytaj_dane()
@@ -24,6 +24,10 @@
             Console.WriteLine("3.Zakończ");
             do
             {
+                if(op < 1 || op > 4)
+                {
+                    Console.WriteLine("podaj jedną z wymienionych opcji");
+                }
                 op = int.Parse(Console.ReadLine());
             } while (op != 1 && op != 2 && op != 3);
         }
@@ -47,7 +51,11 @@
             }
             else
             {
-                stan = stan - kwota;
+                if(kwota > stan)
+                {
+                    Console.WriteLine("Nie masz tylu pieniędzy");
+                }
+                stan = 0;
             }
         }
         public void aplikacja()
